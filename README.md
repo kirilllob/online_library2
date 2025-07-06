@@ -12,6 +12,9 @@ pip install -r requirements.txt
 python render_website.py
 ```
 ![пример сайта](media/img/screen.png)
+## ссылка на публичную онлайн версию
+
+https://kirilllob.github.io/online_library2/pages/index1.html
 
 ## Цель проекта
 Код написан в образовательных целях на онлайн-курсе для веб-разработчиков dvmn.org.
