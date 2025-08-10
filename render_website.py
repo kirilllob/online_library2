@@ -2,6 +2,8 @@ import os
 
 import json
 
+from dotenv import load_dotenv
+
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from livereload import Server
@@ -10,7 +12,8 @@ from more_itertools import chunked
 
 
 def on_reload():
-    with open("meta_data.json", "r", encoding="utf8") as my_file:
+    load_dotenv()
+    with open(["DATA_FILE"], "r", encoding="utf8") as my_file:
         books = json.load(my_file)
     env = Environment(
         loader=FileSystemLoader("."),
