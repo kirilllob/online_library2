@@ -18,13 +18,13 @@ def on_reload():
     template = env.get_template("template.html")
     page_quantity = 10
     books_pages = list(chunked(books, page_quantity))
-    for number, books_page in enumerate(books_pages):
+    for number, books_page in enumerate(books_pages,start=1):
         rendered_page = template.render(
             books = books_page,
             all_numbers = len(books_pages),
-            number_page = number+1
+            number_page = number
         )
-        with open(f"pages/index{number+1}.html", "w", encoding="utf8") as file:
+        with open(f"pages/index{number}.html", "w", encoding="utf8") as file:
             file.write(rendered_page)
 
 
