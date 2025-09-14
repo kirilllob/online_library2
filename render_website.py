@@ -13,7 +13,7 @@ from more_itertools import chunked
 
 def on_reload():
     load_dotenv()
-    with open(["DATA_FILE"], "r", encoding="utf8") as my_file:
+    with open(os.getenv["DATA_FILE","meta_data.json"], "r", encoding="utf8") as my_file:
         books = json.load(my_file)
     env = Environment(
         loader=FileSystemLoader("."),
